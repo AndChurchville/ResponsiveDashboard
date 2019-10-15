@@ -3,9 +3,48 @@ body {
     padding: 0;
     margin: 0;
 }
+
+@media only screen and (max-width: 620px) {
+    .cardbar {
+        flex-direction: column;
+    }
+    .cards{
+        font-size: 1rem;
+        min-width: 50%;
+    }
+    #profilePage .text{
+        font-size: 1.2rem;
+    }
+    .sidebar{
+        padding: 20px;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .projects {
+    font-size: 1.9rem;
+    grid-row: 6/9;
+    grid-column:2/span 3;
+    overflow:hidden;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .calendar {
+        grid-row: 4/5;
+        grid-column:2/span 3;
+        overflow:hidden;
+        min-width: 70%;
+    }
+    .text-welcome{
+        min-width: 50%;
+    }
+  }
+  
+
+
 /* Grid */
 .main{
-    background-color:rgb(39, 38, 67);
+    background-color:rgb(9, 31, 46);
     display: grid;
     width: 100%;
     grid-template-rows: 1fr 1fr 1fr 474px auto;
@@ -83,6 +122,7 @@ body {
     grid-row: 3 / 2 ;
     color:  rgb(39, 38, 67);
     font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -107,13 +147,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-width:800px;
+   
 }
-@media only screen and (max-width: 600px) {
-    .cardbar {
-    float: left;
-    }
-  }
+
 
 .cards{
     border: 2px solid #93b4b4;
@@ -140,6 +176,7 @@ body {
     color: white;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 .calendar h1{
     float: left;
@@ -167,16 +204,7 @@ body {
 /* Calendar Section End */
 
 /* Projects Section Start */
-@media only screen and (max-width: 900px) {
-    .projects {
-     display: block;
-     font-size: .9rem;
-     text-align: left;
-    }
-    .projects h3{
-        float: none;
-    }
-  }
+
 
 .projects {
     padding: 20px;
@@ -186,6 +214,7 @@ body {
     color: white;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 .projects h1{
     float: left;
@@ -197,6 +226,7 @@ body {
     border-collapse: collapse;
     clear: both;
     width: 100%;
+    
 }
 .projects table tr td {
     border-spacing: 30px 50px;
@@ -210,6 +240,7 @@ body {
 .projects a:hover{
     color:  rgb(9, 31, 46);
 }
+
 
 /* Projects Section End */
 
@@ -274,7 +305,7 @@ footer{
 #projectPage .all-projects{
     background-color: #93b4b4;
     grid-row: 3/ -1;
-    grid-column: 2 / -1;
+    grid-column: 2 / 8;
 
 }
 #projectPage .all-projects table {
@@ -297,6 +328,10 @@ footer{
 #projectPage .all-projects a:hover{
     text-decoration: none;
     color:#659696;
+}
+#projectPage footer{
+    grid-column: 1/-1;
+    grid-row:9/-1;
 }
 /* Projects page end */
 
