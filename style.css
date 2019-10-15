@@ -1,0 +1,310 @@
+/* grid container */
+body {
+    padding: 0;
+    margin: 0;
+}
+/* Grid */
+.main{
+    background-color:rgb(39, 38, 67);
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr 474px auto;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: hidden;
+    
+} 
+/* Grid End */
+
+/* Sidebar */
+.sidebar {
+    background-color:rgb(9, 31, 46);
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    grid-column: 1 / 1;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    display: block;
+    padding: 20px;
+    
+}
+.menu a:hover{
+    color:rgb(112, 107, 206);
+    background-color:rgb(22, 21, 37);
+    font-weight: bold;
+}
+.side-avatar img{
+    width: 45%;
+    border-radius: 50%;
+}
+/* Sidebar End */
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2 ;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(39, 38, 67);
+}
+.avatar {
+    width: 5%;
+    float: right;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.avatar img{
+    width: 100%;
+    border-radius: 100%;
+  }
+.header h1{
+    padding: 10px 10px 10px 5%;
+    font-size: 3rem;
+}
+.header h3{
+    float: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+/* Header End */
+
+/* Welcome */
+.welcome {
+    background-color: #e3f6f5;
+    grid-column: 2 / -1;
+    grid-row: 3 / 2 ;
+    color:  rgb(39, 38, 67);
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.text-welcome{
+    width: 25%;
+    padding-left: 5%;
+}
+.level{
+    padding-right:5%;
+    text-align: center;
+}
+/* Welcome End */
+
+/* Card Bar */
+.cardbar {
+    background-color: #bae8e8;
+    padding: 10px;
+    grid-row: 3/ 4;
+    grid-column: 2/ -1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width:800px;
+}
+@media only screen and (max-width: 600px) {
+    .cardbar {
+    float: left;
+    }
+  }
+
+.cards{
+    border: 2px solid #93b4b4;
+    border-radius: 3%;
+    width: 20%;
+    text-align: center;
+    color:rgb(22, 21, 37);
+    font-family: 'Oswald', sans-serif;
+}
+.cards h2{
+    font-size: 2rem;
+}
+.cards h3{
+    font-size: 2rem;
+}
+/* Card Bar End */
+
+/* Calendar Section Start */
+.calendar {
+    padding: 20px;
+    background-color: #88c4c4ef;
+    grid-row: 4 / 9;
+    grid-column: 2 / span 2;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.calendar h1{
+    float: left;
+}
+.calendar h3{
+    float: right;
+}
+.calendar table{
+    border-collapse: collapse;
+    clear: both;
+    width: 100%;
+}
+.calendar table tr td{
+    border-bottom: 2px solid white;
+    padding: 5%;
+}
+.calendar a{
+    text-decoration: none;
+    color: white;
+}
+.calendar a:hover{
+    color:  rgb(9, 31, 46);
+}
+
+/* Calendar Section End */
+
+/* Projects Section Start */
+@media only screen and (max-width: 900px) {
+    .projects {
+     display: block;
+     font-size: .9rem;
+     text-align: left;
+    }
+    .projects h3{
+        float: none;
+    }
+  }
+
+.projects {
+    padding: 20px;
+    background-color:  #6aaaaaef;
+    grid-row: 4 / 9;
+    grid-column: 4 / span 2;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.projects h1{
+    float: left;
+}
+.projects h3{
+    float: right;
+}
+.projects table{
+    border-collapse: collapse;
+    clear: both;
+    width: 100%;
+}
+.projects table tr td {
+    border-spacing: 30px 50px;
+    border-bottom: 2px solid white;
+    padding: 5%;
+}
+.projects a{
+    text-decoration: none;
+    color: white;
+}
+.projects a:hover{
+    color:  rgb(9, 31, 46);
+}
+
+/* Projects Section End */
+
+
+footer{
+    background-color: rgb(9, 31, 46);
+    grid-column: 1 / -1;
+    height: 50px;
+    font-family: 'Oswald', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* profile page */
+#profilePage .profileheader{
+    grid-column: 2 / -1;
+    grid-row: 1/ 3;
+    background-color: #6aaaaaef;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+#profilePage .avatar{
+    width: 15%;
+    margin: 0 auto;
+    border-radius: 0;
+    float: none;
+}
+#profilePage .contactinfo{
+    padding: 20px;
+    background-color: #88c4c4ef;
+    grid-row: 3 / -1;
+    grid-column: 2 / -1;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 70px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+#profilePage .contactinfo span{
+    font-size: 1.2em;
+}
+#profilePage .contactinfo h1{
+    font-size: 3rem;
+}
+#profilePage .contactinfo a{
+    text-decoration: none;
+    color: white;
+}
+#profilePage .contactinfo a:hover{
+    text-decoration: none;
+    color: #659696;
+   
+}
+/* profile page end */
+
+/* Projects page */
+#projectPage .cardbar{
+    grid-row: 2/ 3;
+}
+#projectPage .all-projects{
+    background-color: #93b4b4;
+    grid-row: 3/ -1;
+    grid-column: 2 / -1;
+
+}
+#projectPage .all-projects table {
+    color: white;
+    width: 100%;
+    padding-left: 20%;
+    padding-top: 5%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+#projectPage .all-projects td{
+    padding: 20px;
+}
+#projectPage .all-projects a{
+    text-decoration: none;
+    color: white;
+}
+#projectPage .all-projects a:hover{
+    text-decoration: none;
+    color:#659696;
+}
+/* Projects page end */
+
+/* Calendar Page */
+#calendarPage .calendar {
+    grid-row: 2 / 9;
+    grid-column: 2 / -1;
+    font-size: 1.5rem;
+
+}
+
